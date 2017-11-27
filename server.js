@@ -1,8 +1,19 @@
+//create routes
 const express = require("express");
+
+//find local path
 const path = require("path");
+
+//middleware
 const bodyParser = require("body-parser");
+
+//integrate mongo database using ORM
 const mongoose = require("mongoose");
+
+//server port number
 const PORT = process.env.PORT || 3001;
+
+//use express methods
 const app = express();
 
 // Configure body parser for AJAX requests
