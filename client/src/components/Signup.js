@@ -12,15 +12,16 @@ class Signup extends Component {
 
     
     handleInput = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
         this.setState({
-            name: event.target.value,
-            email: event.target.value,
-            password: event.target.value });
-      
-    }
+                [name]: value
+             });
+    };
 
     handleSubmit = (event) => {
         event.preventDefault();
+        
     }
 
     render(){
