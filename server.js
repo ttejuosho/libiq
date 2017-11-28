@@ -7,6 +7,9 @@ const path = require("path");
 //middleware
 const bodyParser = require("body-parser");
 
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+
 //integrate mongo database using ORM
 const mongoose = require("mongoose");
 
@@ -15,6 +18,21 @@ const PORT = process.env.PORT || 3001;
 
 //use express methods
 const app = express();
+
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+//creating session key
+// app.use(cookieParser());
+// app.use(session({secret: "Shh, its a secret!"}));
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
