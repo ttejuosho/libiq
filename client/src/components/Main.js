@@ -6,13 +6,13 @@ class Main extends Component {
     
         render(){
             return(
-                <div class="maindiv">
-                <div class="imgcontainer">
-                <img class="libimg" src={LibIMG} alt="Library" />
+                <div className="maindiv">
+                <div className="imgcontainer">
+                <img className="libimg" src={LibIMG} alt="Library" />
                 </div>
-                <div class="imgleft">
+                <div className="imgleft">
                 </div>
-                {/* <div class="imgright">
+                {/* <div className="imgright">
                 <form>
                     
                         <div class="col">
@@ -38,8 +38,8 @@ class Main extends Component {
                 <br />
                 <br />
             
-                <button type="button" class="btn">Log In</button>
-                <button type="button" class="btn">Get Started</button>
+                <button type="button" className="btn">Log In</button>
+                <button type="button" className="btn">Get Started</button>
                 </div>
             )
         }

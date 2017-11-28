@@ -88,3 +88,17 @@ button{
   color: white;
   margin-right: 5px; 
 }
+
+.formdiv{
+  float:center;
+  margin: auto auto auto auto;
+  max-width: 60%;
+}
+
+.signuplogo{
+  align-items: center;
+}
+
+.form-control{
+  background-color: rgb(164, 206, 245)
+}

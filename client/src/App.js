@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header.js';
 import Main from './components/Main.js';
+import Signup from './components/Signup.js';
+
 
 class App extends Component {
   render() {
@@ -14,6 +16,7 @@ class App extends Component {
         </div>
       <Header />
       <Main />
+      <Signup />
       </div>
     );
   }
