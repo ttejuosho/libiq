@@ -33,7 +33,11 @@ mongoose.connect(
   {
     useMongoClient: true
   }
-);
+).then(() => console.log("connection successful"))
+ .catch((err)=>console.error(err));
+
+//initalize passport
+
 
 // Send every request to the React app
 // Define any API routes before this runs
