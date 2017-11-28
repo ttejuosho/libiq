@@ -17,6 +17,7 @@ class Books extends Component {
             <a class="navbar-brand" href="#">
             <img src={LibiqLogo} width="100" height="100" alt="Home" />
             </a>
+            
             </nav>
             </div>
             </div>
