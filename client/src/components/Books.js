@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import '../App.css';
-import Header from './Header.js';
 import LibiqLogo from '../images/LibiqLogo2.jpg';
 import LibiqWordLogo from '../images/LibiqWordLogo.png';
 
@@ -9,7 +8,7 @@ class Books extends Component {
         
             };
 
-            
+
     render(){
         return(
             <div>

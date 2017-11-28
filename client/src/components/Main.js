@@ -7,7 +7,7 @@ class Main extends Component {
         
             };
 
-            
+
         render(){
             return(
                 <div className="maindiv">
@@ -16,29 +16,6 @@ class Main extends Component {
                 </div>
                 <div className="imgleft">
                 </div>
-                {/* <div className="imgright">
-                <form>
-                    
-                        <div class="col">
-                        <input type="text" class="form-control" placeholder="First Name Last Name" />
-                        <br />
-                        </div> 
-                        <div class="col">
-                        <input type="text" class="form-control" placeholder="Email" />
-                        <br />
-                        </div>
-                        <div class="col">
-                        <input type="password" class="form-control" placeholder="Password" />
-                        <br />
-                        </div> 
-                        <div class="col">
-                        <input type="password" class="form-control" placeholder="Confirm Password" />
-                        <br />
-                        <button type="button" class="btn">Sign Up</button>
-                        </div>
-                   
-                </form>
-                </div> */}
                 <br />
                 <br />
             
