@@ -19,14 +19,15 @@ const PORT = process.env.PORT || 3001;
 //use express methods
 const app = express();
 
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 
 app.use(require('express-session')({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false
 }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -56,6 +57,23 @@ mongoose.connect(
 
 //initalize passport
 
+
+/***
+	TO DO: Take db stuff out
+ ***///
+
+//get all the collections from mongo database
+const db = require("./models");
+const {User} =db;
+//console.log(User);
+
+// User.create({
+// 	username:"Hello motto",
+// 	email:"ola@gmail.com",
+// 	password:"1234"
+// })
+// .then(x =>console.log(x))
+// .catch(x=>console.error(x))
 
 // Send every request to the React app
 // Define any API routes before this runs
