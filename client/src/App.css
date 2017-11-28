@@ -102,3 +102,11 @@ button{
 .form-control{
   background-color: rgb(164, 206, 245)
 }
+
+#bookheader{
+  float: left;
+}
+
+.homelogo{
+ display: inline;
+}
