@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import '../App.css';
+import Header from './Header.js';
 import LibiqLogo from '../images/LibiqLogo2.jpg';
+import LibiqWordLogo from '../images/LibiqWordLogo.png';
 
-
-class Header extends Component {
+class Books extends Component {
     State = {
+        
+            };
 
-    };
-
-    
+            
     render(){
         return(
             <div>
@@ -19,20 +20,7 @@ class Header extends Component {
             </a>
             </nav>
             </div>
-            <div id="header">
-            <ul class="nav justify-content-end">
-            <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Sign Up</a>
-            </li>
-            </ul>
             </div>
-            </div>
-            
-        )
-    }
-}
+        )}}
 
-export default Header;
+export default Books;

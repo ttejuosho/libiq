@@ -3,7 +3,11 @@ import '../App.css';
 import LibIMG from '../images/libiq1.jpg';
 
 class Main extends Component {
-    
+    State = {
+        
+            };
+
+            
         render(){
             return(
                 <div className="maindiv">
