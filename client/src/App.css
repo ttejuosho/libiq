@@ -22,3 +22,83 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#home{
+  display: block;
+  float: left;
+}
+
+#header{
+  display: block;
+  padding: 30px;
+}
+
+li a{
+  color: rgb(76, 167, 220);
+  text-decoration: none;
+}
+
+nav a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+
+.libimg{
+  width: 100%;
+  height: 500px;
+ 
+}
+
+
+.maindiv{
+  min-height: 700px;
+}
+
+
+.imgleft{
+  display: block;
+  position:absolute;
+  top: 50px;
+  left: 50%;
+}
+
+
+.imgright {
+display: block;
+position: absolute;
+top: 50px;
+right: 50%;
+}
+
+
+h1 {
+  color: white;
+}
+
+
+.imgcontainer {
+  position: relative;
+  text-align: center;
+}
+
+
+button{
+  background-color: rgb(76, 167, 220);
+  color: white;
+  margin-right: 5px; 
+}
+
+.formdiv{
+  float:center;
+  margin: auto auto auto auto;
+  max-width: 60%;
+}
+
+.signuplogo{
+  align-items: center;
+}
+
+.form-control{
+  background-color: rgb(164, 206, 245)
+}
