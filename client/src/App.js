@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Main from './components/Main.js';
+import Books from './components/Books.js';
 import Signin from './components/Signin.js';
 import Signup from './components/Signup.js';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -15,7 +16,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/signin" component={Signin} />
             <Route exact path="/signup" component={Signup} />
-            <Route exact path="/books" component={Main} /> 
+            <Route exact path="/books" component={Books} /> 
             <Route component={Main} /> 
           </Switch> 
         </div>

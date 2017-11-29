@@ -79,7 +79,6 @@ h1 {
   color: white;
 }
 
-
 .imgcontainer {
   position: relative;
   text-align: center;
@@ -90,6 +89,14 @@ button{
   color: white;
   margin-right: 5px; 
 }
+
+/* button a{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(76, 167, 220);
+  padding: 15px;
+  border-radius: 7px;
+} */
 
 .formdiv{
   float:center;
