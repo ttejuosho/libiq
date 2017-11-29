@@ -12,18 +12,17 @@ class Main extends Component {
         render(){
             return(
                 <div className="maindiv">
-                <Header />
+                {/* <Header />
                 <div className="imgcontainer">
                 <img className="libimg" src={LibIMG} alt="Library" />
                 </div>
-                <div className="imgleft">
-                </div>
+                <div className="imgleft"> */}
+                {/* This code will allow us to automatically dump the correct GrandChild component */}
+              {this.props.children}
+                {/* </div> */}
                 <br />
                 <br />
-                {this.props.children}
-                <button type="button" className="btn"><a href="/signin">Log In</a></button>
-                <button type="button" className="btn"><a href="/signup">Get Started</a></button>
-                
+            
                 </div>
             )
         }

@@ -1,4 +1,4 @@
-// Inclue the React library
+// Include the React library
 import React from "react";
 
 // Include the react-router module
@@ -15,21 +15,24 @@ import Main from '../components/Main.js';
 import Signin from '../components/Signin.js';
 import Signup from '../components/Signup.js';
 import Books from '../components/Books.js';
+import App from '../App.js';
+
 
 // Export the Routes
 export default (
   // High level component is the Router component.
   <Router history={browserHistory}>
-    <Route path="/" component={Main}>
+    <Route path="/" component={App}>
 
       {/* If user selects Search or Saved show the appropriate component */}
       <Route path="Signin" component={Signin} />
       <Route path="Signup" component={Signup} />
-      <Route path="Books" component={Books} />
+      <Route path="Books" component={Main} />
       
       {/* If user selects any other path... we get the Home Route */}
-      <IndexRoute component={Main} />
-
+      <IndexRoute component={App} />
+    
     </Route>
+
   </Router>
 );

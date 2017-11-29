@@ -27,7 +27,7 @@ class Signup extends Component {
     render(){
         return(
             <div id="signupdiv">
-            <img className="signuplogo" src={LibiqLogo} width="100" height="100" alt="Home"/><br />
+            <a href="/"><img className="signuplogo" src={LibiqLogo} width="100" height="100" alt="Home"/></a><br />
             <img className="signuplogo" src={LibiqWordLogo} width="176" height="100" alt="Word"/>
             <div className="formdiv">
 
@@ -79,6 +79,7 @@ class Signup extends Component {
                     </div>
                 
             </form>
+            
             </div>
             <br />
             <br />
