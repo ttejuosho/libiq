@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .App {
   text-align: center;
 }
@@ -83,7 +85,6 @@ h1 {
   text-align: center;
 }
 
-
 button{
   background-color: rgb(76, 167, 220);
   color: white;
@@ -97,7 +98,7 @@ button{
 }
 
 .signuplogo{
-  align-items: center;
+  margin: auto 0;
 }
 
 .form-control{

@@ -7,7 +7,7 @@ import React from "react";
 // Include the Router component
 // Include the browserHistory prop to configure client side routing
 // https://github.com/ReactTraining/react-router/blob/master/docs/guides/Histories.md#browserhistory
-import { Route, IndexRoute, Router, browserHistory } from "react-router";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Reference the high-level components
 import Header from '../components/Header.js';
@@ -21,18 +21,18 @@ import App from '../App.js';
 // Export the Routes
 export default (
   // High level component is the Router component.
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
+  <Router>
+    <Switch>
 
       {/* If user selects Search or Saved show the appropriate component */}
-      <Route path="Signin" component={Signin} />
-      <Route path="Signup" component={Signup} />
-      <Route path="Books" component={Main} />
+      <Route exact path="Signin" component={Signin} />
+      <Route exact path="Signup" component={Signup} />
+      <Route exact path="Books" component={Main} />
       
       {/* If user selects any other path... we get the Home Route */}
-      <IndexRoute component={App} />
+      <Route component={App} />
     
-    </Route>
+    </Switch>
 
   </Router>
 );
