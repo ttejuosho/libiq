@@ -7,10 +7,10 @@ router.route("/")
   .post(habitController.create);
 
 // Matches with "/api/habit/:id"
-router
-  .route("/:id")
-  .get(habitController.findById)
-  .put(habitController.update)
-  .delete(habitController.remove);
+// router
+//   .route("/:id")
+//   .get(habitController.findById)
+//   .put(habitController.update)
+//   .delete(habitController.remove);
 
 module.exports = router;

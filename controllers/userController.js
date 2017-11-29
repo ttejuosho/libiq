@@ -3,10 +3,9 @@
 const db = require("../models");
 
 module.exports = {
-
 	//find all users
 	findAll: (req, res) => {
-		db.User.find({})
+		db.User.find(req.query)
 		.then(function(dbUser){
 			res.json(dbUser);
 		})
@@ -14,24 +13,25 @@ module.exports = {
 			res.json(err);
 		})
 
-	}
-
+	},
 	//find a user by id
 	findById: (req, res) =>{
 		const id = req.params.id;
 		db.User.findById(id)
 		.then(dbUser => res.json(dbUser))
 		.catch(err => res.status(422).json(err));
-	}
+	},
 
 	//create user
-	create: (req, res) =>{
+	create: function(req, res){
+		console.log(req.body);
+
 		db.User
       	.create(req.body)
       	.then(dbUser => res.json(dbUser))
       	.catch(err => res.status(422).json(err));
 
-	}
+	},
 
 	update:(req, res) =>{
 		db.User
