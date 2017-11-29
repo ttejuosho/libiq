@@ -3,25 +3,23 @@ import '../App.css';
 import LibiqLogo from '../images/LibiqLogo2.jpg';
 import LibiqWordLogo from '../images/LibiqWordLogo.png';
 
-class Signup extends Component {
+class Signin extends Component {
     state = {
-            name: "",
             email: "",
             password: ""
             };
 
-    
     handleInput = (event) => {
         const name = event.target.name;
         const value = event.target.value;
         this.setState({
                 [name]: value
-             });
+                });
     };
 
     handleSubmit = (event) => {
         event.preventDefault();
-
+        
     }
 
     render(){
@@ -37,45 +35,29 @@ class Signup extends Component {
                     <input 
                     type="text" 
                     class="form-control" 
-                    placeholder="Login Name"
-                    name="name" 
-                    value={this.state.name} 
+                    placeholder="Email"
+                    name="Email" 
+                    value={this.state.email} 
                     onChange={this.handleInput} />
                     <br />
                     </div> 
-                    <div class="col">
-                    <input 
-                    type="text" 
-                    class="form-control" 
-                    placeholder="Email"
-                    name="email" 
-                    value={this.state.email}
-                    onChange={this.handleInput}  />
-                    <br />
-                    </div>
                     <div class="col">
                     <input 
                     type="password" 
                     class="form-control" 
                     placeholder="Password"
-                    name="password"
+                    name="email" 
                     value={this.state.password}
                     onChange={this.handleInput}  />
                     <br />
-                    </div> 
+                    </div>
                     <div class="col">
-                    <input 
-                    type="password" 
-                    class="form-control" 
-                    placeholder="Confirm Password"
-                    name= "password"
-                    value={this.state.password} 
-                    onChange={this.handleInput} />
+                   
                     <br />
-                    <button type="button" class="btn">Sign Up</button>
+                    <button type="button" class="btn">Log In</button>
                     <br/>
                     <br/>
-                    <h6>Already have an account? <a href="/signin">Log in Here</a></h6>
+                    
                     </div>
                 
             </form>
@@ -89,4 +71,4 @@ class Signup extends Component {
 }
 
 
-export default Signup;
+export default Signin;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from "react-router"
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header.js';
@@ -14,8 +15,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>LibiQ - Built With React</h2>
         </div>
-      <Header />
-      <Main />
+        {this.props.children}
+      {/* <Header /> */}
+      {/* <Main /> */}
       {/* <Signup /> */}
       {/* <Books /> */}
       </div>

@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import '../App.css';
 import LibIMG from '../images/libiq1.jpg';
+// import {Link} from "react-router"
+import Header from './Header.js';
 
 class Main extends Component {
     State = {
         
             };
 
-
         render(){
             return(
                 <div className="maindiv">
+                <Header />
                 <div className="imgcontainer">
                 <img className="libimg" src={LibIMG} alt="Library" />
                 </div>
@@ -18,9 +20,10 @@ class Main extends Component {
                 </div>
                 <br />
                 <br />
-            
-                <button type="button" className="btn">Log In</button>
-                <button type="button" className="btn">Get Started</button>
+                {this.props.children}
+                <button type="button" className="btn"><a href="/signin">Log In</a></button>
+                <button type="button" className="btn"><a href="/signup">Get Started</a></button>
+                
                 </div>
             )
         }
