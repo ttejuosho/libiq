@@ -1,7 +1,13 @@
 @charset "UTF-8";
 
-.App {
+@font-face {
+  font-family: "Apercu";
+  src: url("./Fonts/apercu-regular-webfont.woff") format('woff');
+}
+
+body {
   text-align: center;
+  font-family: "Apercu";
 }
 
 .App-logo {
@@ -119,3 +125,13 @@ button{
 .homelogo{
  display: inline;
 }
+
+hr{
+  border: 0.5px solid rgb(164, 206, 245);
+}
+
+nav-item a{
+  text-decoration: none;
+  color: white;
+}
+

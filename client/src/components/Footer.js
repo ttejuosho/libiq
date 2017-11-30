@@ -17,14 +17,14 @@ class Footer extends Component{
                         <a class="nav-link active" href="#">Active</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="">Link</a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Other Projects</a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="res-create.herokuapp.com" target="_blank">res.Create</a>
-                      <a class="dropdown-item" href="https://zaynaib.github.io/Bootstrap-Portfolio/" target="_blank">Ola</a>
-                      <a class="dropdown-item" href="https://ttejuosho.github.io/portfolio/contact.html" target="_blank">Taiwo</a>
+                      <a class="dropdown-item" href="res-create.herokuapp.com" target="_blank" rel='noreferrer noopener'>res.Create</a>
+                      <a class="dropdown-item" href="https://zaynaib.github.io/Bootstrap-Portfolio/" target="_blank" rel='noreferrer noopener'>Ola</a>
+                      <a class="dropdown-item" href="https://ttejuosho.github.io/portfolio/contact.html" target="_blank" rel='noreferrer noopener'>Taiwo</a>
                      
                     </div>
                   </li>
