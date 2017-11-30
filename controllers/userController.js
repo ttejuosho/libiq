@@ -42,6 +42,14 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  userHabit:function (req, res){
+  	const id = req.params.id;
+		db.User.findById(id)
+		.populate("habitId")
+		.then(dbUser => res.json(dbUser))
+		.catch(err => res.status(422).json(err));
+
   }
 
 

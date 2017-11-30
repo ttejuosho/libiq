@@ -12,5 +12,9 @@ router
   .get(userController.findById)
   .put(userController.update)
   .delete(userController.remove);
+
+router
+	.route("/:id/habits")
+	.get(userController.userHabit)
 	
 module.exports = router;
