@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import '../App.css';
-import FormErrors from '../FormErrors.js'
 import '../animate.css';
 import LibiqLogo from '../images/LibiqLogo2.jpg';
 import LibiqWordLogo from '../images/LibiqWordLogo.png';
+import Footer from './Footer.js';
+
 
 class Signin extends Component {
     state = {
@@ -56,7 +57,7 @@ class Signin extends Component {
 
     render(){
         return(
-            <div id="signupdiv">
+          <div>
            <a href="/"><center><img className="signuplogo fadeInDown animated" src={LibiqLogo} width="100" height="100" alt="Home"/></center></a><br />
            <center><img className="signuplogo fadeInDown animated" src={LibiqWordLogo} width="176" height="100" alt="Word"/></center>
             <div className="formdiv fadeInDown animated">
@@ -102,6 +103,7 @@ class Signin extends Component {
             </div>
             <br />
             <br />
+            <Footer />
         </div>
 
         )

@@ -5,9 +5,11 @@
   src: url("./Fonts/apercu-regular-webfont.woff") format('woff');
 }
 
-body {
+html, body {
   text-align: center;
   font-family: "Apercu";
+  height: 100%;
+  margin: 0;
 }
 
 .App-logo {
@@ -93,7 +95,8 @@ h1 {
 button{
   background-color: rgb(76, 167, 220);
   color: white;
-  margin-right: 5px; 
+  margin-right: 5px;
+  
 }
 
 /* button a{
@@ -135,3 +138,11 @@ nav-item a{
   color: white;
 }
 
+.footer.push{
+  height: 50px;
+}
+
+.bodyDiv{
+  height: 100%;
+  margin-bottom: -50px;
+}

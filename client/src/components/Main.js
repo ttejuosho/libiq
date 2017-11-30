@@ -21,7 +21,7 @@ class Main extends Component {
                 <img src={logo} className="App-logo" alt="logo" />
                 <h2>LibiQ - Built With React</h2>
             </div>
-            <div className="maindiv">
+            <div>
             <div id="home">
                 <nav class="nav">
                 <a class="navbar-brand" href="/">

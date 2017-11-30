@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import '../App.css';
+import '../animate.css';
 import FormErrors from '../FormErrors.js'
 import LibiqLogo from '../images/LibiqLogo2.jpg';
 import LibiqWordLogo from '../images/LibiqWordLogo.png';
+import Footer from './Footer.js';
+
 
 class Signup extends Component {
     state = {
@@ -130,13 +133,15 @@ class Signup extends Component {
                     <br/>
                     <br/>
                     <h6>Already have an account? <a href="/signin">Log in Here</a></h6></center>
-                    </div>
+                
+                </div>
                 
             </form>
             
             </div>
             <br />
             <br />
+            <Footer />
         </div>
 
         )
