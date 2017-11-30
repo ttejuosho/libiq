@@ -5,6 +5,9 @@ import logo from '../logo.svg';
 import LibIMG from '../images/libiq1.jpg';
 // import {Link} from "react-router"
 import Header from './Header.js';
+import Footer from './Footer.js';
+
+
 
 class Main extends Component {
     state = {
@@ -48,8 +51,7 @@ class Main extends Component {
             <button type="button" className="btn"><a href="/signin">Log In</a></button>
             <button type="button" className="btn"><a href="/signup">Get Started</a></button>
             </div>
-            {/* This code will allow us to automatically dump the correct GrandChild component */}
-            {/* {this.props.children} */}
+            <Footer />
             </div>
         );
         }
