@@ -14,7 +14,8 @@ module.exports = {
     console.log(db.User._id)
     db.User.findByIdAndUpdate({ _id: req.body.id },
      {$push:db.Habit.create(req.body)}
-     )
+     ).then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
   //find a habit by id
   findById: (req, res) =>{
