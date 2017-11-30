@@ -13,8 +13,14 @@ router
   .put(userController.update)
   .delete(userController.remove);
 
+// Matches with "/api/user/id/habits"
 router
 	.route("/:id/habits")
-	.get(userController.userHabit)
+	.get(userController.userHabit);
+
+// Matches with "/api/user/id/books"
+router
+	.route("/:id/books")
+	.get(userController.userBook);
 	
 module.exports = router;
