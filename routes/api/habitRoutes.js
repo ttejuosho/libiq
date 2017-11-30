@@ -6,11 +6,11 @@ router.route("/")
   .get(habitController.findAll)
   .post(habitController.create);
 
-// Matches with "/api/habit/:id"
-// router
-//   .route("/:id")
-//   .get(habitController.findById)
-//   .put(habitController.update)
-//   .delete(habitController.remove);
+//Matches with "/api/habit/:id"
+router
+  .route("/:id")
+  .get(habitController.findById)
+  .put(habitController.update)
+  .delete(habitController.remove);
 
 module.exports = router;

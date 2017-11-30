@@ -10,34 +10,20 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-//   Contact.findByIdAndUpdate(
-//     info._id,
-//     {$push: {"messages": {title: title, msg: msg}}},
-//     {safe: true, upsert: true},
-//     function(err, model) {
-//         console.log(err);
-//     }
-// );
-
   create: function(req,res){
-    db.User.findByIdAndUpdate(
-     _id:req.params.id,
+    console.log(db.User._id)
+    db.User.findByIdAndUpdate({ _id: req.body.id },
      {$push:db.Habit.create(req.body)}
-     )
+     ).then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
-  // create: function(req, res) {
-  //   db.User
-  //     .findByIdAndUpdate({_id:req.params.id})
-  //     .then({
-  //       db.Habit.create(req.body)
-  //         .then(function(results){
-  //           return res.json(results)
-  //         })
-  //     })
-  //     .then(function(results){
-  //       $push:results
-  //     })
-  // },
+  //find a habit by id
+  findById: (req, res) =>{
+    const id = req.params.id;
+    db.User.findById(id)
+    .then(dbUser => res.json(dbUser))
+    .catch(err => res.status(422).json(err));
+  },
   update: function(req, res) {
     db.Habit
       .findOneAndUpdate({ _id: req.params.id }, req.body)
