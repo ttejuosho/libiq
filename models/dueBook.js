@@ -7,8 +7,7 @@ const bookSchema = new Schema({
   genre: String,
   date:{type:Date,default: Date.now },
   isReturned:{type:Boolean, default:false},
-  userId: {type: Schema.Types.ObjectId, ref: 'User'},
-  userSessionId:String
+  userId:String
 
 });
 

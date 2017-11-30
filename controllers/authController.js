@@ -1,11 +1,13 @@
 //http://www.thebuttonfactory.nl/?p=2496
 const mongoose = require('mongoose');
-const User = require('../models.User');
+const db = require('../models');
 const passport = require("passport");
+var exports = module.exports = {}
+
 
 exports.register = function (req, res) {
-    console.log("registering: " + req.body.firstName);
-    User.register(new User({
+    console.log("registering: " + req.body.username);
+    db.User.register(new User({
         username: req.body.username,
         email: req.body.email
     }), req.body.password, function (err, user) {
@@ -23,7 +25,7 @@ exports.register = function (req, res) {
 
 exports.login = function (req, res, next) {
 
-    User.authenticate()(req.body.username, req.body.password, function (err, user, options) {
+    db.User.authenticate()(req.body.username, req.body.password, function (err, user, options) {
         if (err) return next(err);
         if (user === false) {
             res.send({
