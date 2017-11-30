@@ -12,14 +12,19 @@ class Books extends Component {
     render(){
         return(
             <div>
-            <div id="home">
+            <div id="bookheader">
             <nav class="nav">
             <a class="navbar-brand" href="#">
             <img src={LibiqLogo} width="100" height="100" alt="Home" />
             </a>
-            
             </nav>
             </div>
+           
+            <img className="homelogo" src={LibiqWordLogo} width="176" height="100" alt="Home" />
+            <div className="books">
+            </div>
+            <h6>Click Here to <a href="">add a Book</a></h6>
+           
             </div>
         )}}
 
