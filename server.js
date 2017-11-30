@@ -18,14 +18,13 @@ const PORT = process.env.PORT || 3001;
 //use express methods
 const app = express();
 
-//server routes
-const routes = require("./routes");
-app.use(routes);
-
-
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
+
+//server routes
+const routes = require("./routes");
+app.use(routes);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
