@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header.js';
 import Main from './components/Main.js';
-import Signup from './components/Signup.js';
 import Books from './components/Books.js';
+import Signin from './components/Signin.js';
+import Signup from './components/Signup.js';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import './App.css';
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>LibiQ - Built With React</h2>
+      <BrowserRouter>
+        <div>
+          <Switch>
+            <Route exact path="/signin" component={Signin} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/books" component={Books} /> 
+            <Route component={Main} /> 
+          </Switch> 
         </div>
-      <Header />
-      <Main />
-      <Signup />
-      <Books />
-      </div>
-    );
+      </BrowserRouter>   
+    )
   }
 }
 

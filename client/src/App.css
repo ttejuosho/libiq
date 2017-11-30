@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .App {
   text-align: center;
 }
@@ -38,6 +40,7 @@ li a{
   text-decoration: none;
 }
 
+
 nav a{
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -76,18 +79,24 @@ h1 {
   color: white;
 }
 
-
 .imgcontainer {
   position: relative;
   text-align: center;
 }
-
 
 button{
   background-color: rgb(76, 167, 220);
   color: white;
   margin-right: 5px; 
 }
+
+/* button a{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(76, 167, 220);
+  padding: 15px;
+  border-radius: 7px;
+} */
 
 .formdiv{
   float:center;
@@ -96,9 +105,17 @@ button{
 }
 
 .signuplogo{
-  align-items: center;
+  margin: auto 0;
 }
 
 .form-control{
   background-color: rgb(164, 206, 245)
+}
+
+#bookheader{
+  float: left;
+}
+
+.homelogo{
+ display: inline;
 }
