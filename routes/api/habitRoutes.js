@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const habitController = require("../../controllers/habitController");
 
+
 // Matches with "/api/habit"
 router.route("/")
   .get(habitController.findAll)

@@ -54,7 +54,7 @@ module.exports = {
   userBook:function(req,res){
   	const id = req.params.id;
   	db.User.findById(id)
-  	.populate("bookId")
+  	.populate("dueBooksId")
   	.then(dbUser => res.json(dbUser))
   	.catch(err => res.status)
   }
