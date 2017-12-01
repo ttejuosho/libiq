@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import '../App.css';
 import '../animate.css';
-import FormErrors from '../FormErrors.js'
+// import FormErrors from '../FormErrors.js'
 import LibiqLogo from '../images/LibiqLogo2.jpg';
 import LibiqWordLogo from '../images/LibiqWordLogo.png';
 import Footer from './Footer.js';
@@ -102,7 +102,7 @@ class Signup extends Component {
                     <div className={`col ${this.errorClass(this.state.formErrors.name)}`}>
                     <input 
                     type="text" 
-                    class="form-control" 
+                    className="form-control" 
                     placeholder="Login Name"
                     name="name" 
                     value={this.state.name} 
@@ -113,7 +113,7 @@ class Signup extends Component {
                     <div className={`col ${this.errorClass(this.state.formErrors.email)}`}>
                     <input 
                     type="text" 
-                    class="form-control" 
+                    className="form-control" 
                     placeholder="Email"
                     name="email" 
                     value={this.state.email}
@@ -124,7 +124,7 @@ class Signup extends Component {
                     <div className={`col ${this.errorClass(this.state.formErrors.password)}`}>
                     <input 
                     type="password" 
-                    class="form-control" 
+                    className="form-control" 
                     placeholder="Password"
                     name="password"
                     value={this.state.password}
@@ -135,7 +135,7 @@ class Signup extends Component {
                     <div className="col">
                     <input 
                     type="password" 
-                    class="form-control" 
+                    className="form-control" 
                     placeholder="Confirm Password"
                     name= "confirmPassword"
                     value={this.state.confirmPassword} 
@@ -148,7 +148,7 @@ class Signup extends Component {
                     <center><button 
                     disabled={!this.state.formValid} 
                     type="button" 
-                    class="btn">Sign Up</button>
+                    className="btn">Sign Up</button>
                     <br/>
                     <br/>
                     <h6>Already have an account? <a href="/signin">Log in Here</a></h6></center>

@@ -67,7 +67,7 @@ class Signin extends Component {
                     <div className={`col ${this.errorClass(this.state.formErrors.email)}`}>
                     <input 
                     type="text" 
-                    class="form-control" 
+                    className="form-control" 
                     placeholder="Email"
                     name="email" 
                     value={this.state.email} 
@@ -78,7 +78,7 @@ class Signin extends Component {
                     <div className={`col ${this.errorClass(this.state.formErrors.email)}`}>
                     <input 
                     type="password" 
-                    class="form-control" 
+                    className="form-control" 
                     placeholder="Password"
                     name="password" 
                     value={this.state.password}
@@ -92,7 +92,7 @@ class Signin extends Component {
                     <center><button 
                     disabled={!this.state.formValid}
                     type="button" 
-                    class="btn">Log In</button>
+                    className="btn">Log In</button>
                     <br/>
                     <br/>
                     

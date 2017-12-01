@@ -13,19 +13,19 @@ class Header extends Component {
         return(
             <div>
             <div id="home">
-            <nav class="nav">
-            <a class="navbar-brand" href="/">
+            <nav className="nav">
+            <a className="navbar-brand" href="/">
             <img src={LibiqLogo} width="100" height="100" alt="Home" />
             </a>
             </nav>
             </div>
             <div id="header">
-            <ul class="nav justify-content-end">
-            <li class="nav-item">
-            <a class="nav-link" href="/signin">Login</a>
+            <ul className="nav justify-content-end">
+            <li className="nav-item">
+            <a className="nav-link" href="/signin">Login</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="/signup">Sign Up</a>
+            <li className="nav-item">
+            <a className="nav-link" href="/signup">Sign Up</a>
             </li>
 
             </ul>

@@ -24,8 +24,8 @@ class Books extends Component {
         return(
             <div>
             <div id="bookheader">
-            <nav class="nav">
-            <a class="navbar-brand" href="/">
+            <nav className="nav">
+            <a className="navbar-brand" href="/">
             <img src={LibiqLogo} width="100" height="100" alt="Home" />
             </a>
             </nav>
@@ -42,7 +42,7 @@ class Books extends Component {
                     <div className="col">
                         <input 
                         type="text" 
-                        class="form-control" 
+                        className="form-control" 
                         placeholder="Enter Book Title"
                         name="bookTitle" 
                         value={this.state.bookTitle} 
@@ -52,7 +52,7 @@ class Books extends Component {
                     
                     <button
                     type="button" 
-                    class="btn">Add Book                   
+                    className="btn">Add Book                   
                     </button>
 
                     <br/>
