@@ -54,6 +54,16 @@ class Signin extends Component {
             return(error.length === 0 ? '' : 'has-error');
           }
         
+          login = (event) => {
+            event.preventDefault();
+
+            console.log(`
+            email: ${this.state.email}
+            password: ${this.state.password}
+    `);
+
+            this.setState({ email: "", password:"" })
+          }
 
     render(){
         return(
@@ -91,6 +101,7 @@ class Signin extends Component {
                     <br />
                     <center><button 
                     disabled={!this.state.formValid}
+                    onClick={this.login.bind(this)}
                     type="button" 
                     className="btn">Log In</button>
                     <br/>

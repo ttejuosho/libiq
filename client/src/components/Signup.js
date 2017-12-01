@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import '../App.css';
 import '../animate.css';
-// import FormErrors from '../FormErrors.js'
+import FormErrors from '../FormErrors.js'
 import LibiqLogo from '../images/LibiqLogo2.jpg';
 import LibiqWordLogo from '../images/LibiqWordLogo.png';
 import Footer from './Footer.js';
@@ -12,10 +12,12 @@ class Signup extends Component {
             name: "",
             email: "",
             password: "",
-            formErrors: {name: '', email: '', password: ''}, 
+            confirmPassword: "",
+            formErrors: {name: "", email: "", password: "",confirmPassword:""}, 
             nameValid: false,    
             emailValid: false,
             passwordValid: false,
+            confirmPasswordValid: false,
             formValid: false
             };
 
@@ -72,17 +74,21 @@ class Signup extends Component {
                     name: ${this.state.name}
                     email: ${this.state.email}
                     password: ${this.state.password}
+                    confirmPassword: ${this.state.confirmPassword}
             `);
 
             // Grab Name & Email and creat newUser Object
             const newUser = {
                 name: this.state.name,
-                email: this.state.email
+                email: this.state.email,
+                password: this.state.password
             };
 
             API.create(newUser)
-               .then(result => console.log("created New User", result.data));
+               .then(result => console.log("created New User", newUser));
 
+
+               this.setState({ name: "", email: "", password: "", confirmPassword: "" })
         }
 
 
@@ -132,14 +138,15 @@ class Signup extends Component {
                     <br />
                     </div> 
 
-                    <div className="col">
+                    <div className={`col ${this.errorClass(this.state.formErrors.confirmPassword)}`}>
                     <input 
                     type="password" 
                     className="form-control" 
                     placeholder="Confirm Password"
                     name= "confirmPassword"
                     value={this.state.confirmPassword} 
-                    onChange={this.handleInput} />
+                    onChange={this.handleInput} 
+                    />
                     <small id="passwordHelpBlock" class="form-text text-muted">
                     Your password must be 8-20 characters long.
                     </small>
@@ -148,9 +155,11 @@ class Signup extends Component {
                     <center><button 
                     disabled={!this.state.formValid} 
                     type="button" 
-                    className="btn">Sign Up</button>
+                    className="btn"
+                    onClick={ this.handleSubmit.bind(this)} >Sign Up</button>
                     <br/>
                     <br/>
+                    
                     <h6>Already have an account? <a href="/signin">Log in Here</a></h6></center>
                 
                 </div>

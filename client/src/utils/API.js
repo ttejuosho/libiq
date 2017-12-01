@@ -4,6 +4,7 @@ import axios from "axios";
 export default {
     // Creates newUSer Object
     create: dbUser => {
+        console.log("wew are eehrefie")
         return axios.post(`/api/user/create`, dbUser);
     },
 
@@ -13,7 +14,7 @@ export default {
     },
 
     // Creates New Book Object
-    create: dbBook => {
+    createBook: dbBook => {
         return axios.post(`/api/book/create`, dbBook);
     },
 

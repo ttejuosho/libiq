@@ -24,6 +24,7 @@ module.exports = {
 
 	//create user
 	create: function(req, res){
+		console.log(req.body, "This is body")
 		db.User
       	.create(req.body)
       	.then(dbUser => res.json(dbUser))
