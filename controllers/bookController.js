@@ -41,7 +41,6 @@ module.exports = {
     db.Book
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
-
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
@@ -50,6 +49,13 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  favorites: function(req,res){
+    db.Book
+      .find({isFavorite:true})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+
   },
   archives: function(req,res){
     db.Book
@@ -64,4 +70,7 @@ module.exports = {
       .then(dbModel =>res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
+
+  
+  
 };
