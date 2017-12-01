@@ -10,11 +10,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Reference the high-level components
-import Header from '../components/Header.js';
+
 import Main from '../components/Main.js';
 import Signin from '../components/Signin.js';
 import Signup from '../components/Signup.js';
-import Books from '../components/Books.js';
 import App from '../App.js';
 
 

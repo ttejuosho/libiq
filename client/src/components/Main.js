@@ -3,8 +3,6 @@ import '../App.css';
 import LibiqLogo from '../images/LibiqLogo2.jpg';
 import logo from '../logo.svg';
 import LibIMG from '../images/libiq1.jpg';
-// import {Link} from "react-router"
-import Header from './Header.js';
 import Footer from './Footer.js';
 
 

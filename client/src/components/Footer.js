@@ -14,13 +14,13 @@ class Footer extends Component{
             <hr />
                <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
+                        <a class="nav-link active" href="">Active</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">Link</a>
                     </li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Other Projects</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Other Projects</a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="https://res-create.herokuapp.com" target="_blank" rel='noreferrer noopener'>res.Create</a>
                       <a class="dropdown-item" href="https://zaynaib.github.io/Bootstrap-Portfolio/" target="_blank" rel='noreferrer noopener'>Ola</a>
@@ -29,7 +29,7 @@ class Footer extends Component{
                     </div>
                   </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/ttejuosho/libiq" target="_blank">github</a>
+                        <a class="nav-link" href="https://github.com/ttejuosho/libiq" target="_blank" rel='noreferrer noopener'>github</a>
                     </li>
                 </ul>
                 <hr />
