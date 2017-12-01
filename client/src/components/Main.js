@@ -5,8 +5,6 @@ import logo from '../logo.svg';
 import LibIMG from '../images/libiq1.jpg';
 import Footer from './Footer.js';
 
-
-
 class Main extends Component {
     state = {
         
