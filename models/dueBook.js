@@ -7,6 +7,7 @@ const bookSchema = new Schema({
   genre: String,
   date:{type:Date,default: Date.now },
   isReturned:{type:Boolean, default:false},
+  isFavorite:{type:Boolean,default:false},
   userId:String
 
 });
