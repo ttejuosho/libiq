@@ -4,7 +4,7 @@ import axios from "axios";
 export default {
     // Creates newUSer Object
     create: dbUser => {
-        return axios.post(`/api/user/create`, dbUser);
+        return axios.post(`/api/user/`, dbUser);
     },
 
     // Gets user info object
@@ -14,7 +14,7 @@ export default {
 
     // Creates New Book Object
     create: dbBook => {
-        return axios.post(`/api/book/create`, dbBook);
+        return axios.post(`/api/book/`, dbBook);
     },
 
     // Finds All books Added by a User

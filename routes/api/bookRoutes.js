@@ -18,5 +18,8 @@ router.route("/archives")
 
 router.route("/duebooks")
 	.get(booksController.dueBooks);
+
+router.route("/favorites")
+	.get(booksController.favorites);
 	
 module.exports = router;

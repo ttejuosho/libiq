@@ -7,7 +7,6 @@ const userSchema = new Schema({
   email: { type: String},
   password: { type: String},
   habitId: [{type: mongoose.Schema.Types.ObjectId, ref: 'Habit'}],
-  favBooks:{ type : Array , "default" : [] },
   dueBooksId:[{type:mongoose.Schema.Types.ObjectId,ref:'Books'}]
 });
 
