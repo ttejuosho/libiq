@@ -43,32 +43,6 @@ mongoose.connect(
  .catch((err)=>console.error(err));
 
 
-//initalize passport
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-
-//creating session key
-app.use(cookieParser());
-app.use(expressSession({secret: 'mySecretKey'}));
-
-//intiailize user session
-app.use(passport.initialize());
-app.use(passport.session());
-
-
-/***
-	TO DO: Take db stuff out
- ***///
-
-//get all the collections from mongo database
-
-
-
-
-
-
-
-
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
