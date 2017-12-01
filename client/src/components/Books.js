@@ -7,7 +7,8 @@ import Footer from './Footer.js';
 
 class Books extends Component {
     state = {
-        bookTitle: ""
+        bookTitle: "",
+        dueDate: ""
             };
 
 

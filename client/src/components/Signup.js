@@ -5,7 +5,7 @@ import FormErrors from '../FormErrors.js'
 import LibiqLogo from '../images/LibiqLogo2.jpg';
 import LibiqWordLogo from '../images/LibiqWordLogo.png';
 import Footer from './Footer.js';
-
+import API from "../utils/API"
 
 class Signup extends Component {
     state = {
@@ -66,6 +66,25 @@ class Signup extends Component {
         return(error.length === 0 ? '' : 'has-error');
         }
         
+        handleSubmit = event => {
+            event.preventDefault();
+            console.log(`
+                    name: ${this.state.name}
+                    email: ${this.state.email}
+                    password: ${this.state.password}
+            `);
+
+            // Grab Name & Email and creat newUser Object
+            const newUser = {
+                name: this.state.name,
+                email: this.state.email
+            };
+
+            API.create(newUser)
+               .then(result => console.log("created New User", result.data));
+
+        }
+
 
     render(){
         return(
@@ -141,7 +160,10 @@ class Signup extends Component {
             </div>
             <br />
             <br />
+            
+            
             <Footer />
+            
         </div>
 
         )

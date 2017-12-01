@@ -10,7 +10,7 @@ class Footer extends Component{
 
     render(){
         return(
-            <div className="footer">
+            <footer className="footer">
             <hr />
                <ul class="nav justify-content-center">
                     <li class="nav-item">
@@ -34,7 +34,7 @@ class Footer extends Component{
                 </ul>
                 <hr />
                 Copyright &copy; 2017 All rights reserved. | Privacy Policy | Terms of Use
-            </div>
+            </footer>
         )
 }
 }

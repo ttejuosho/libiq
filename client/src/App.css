@@ -10,6 +10,7 @@ html, body {
   font-family: "Apercu";
   height: 100%;
   margin: 0;
+
 }
 
 .App-logo {
@@ -110,7 +111,8 @@ button{
 .formdiv{
   float:center;
   margin: auto auto auto auto;
-  max-width: 60%;
+  max-width: 430px;
+
 }
 
 .signuplogo{
@@ -138,7 +140,7 @@ nav-item a{
   color: white;
 }
 
-.footer.push{
+.footer, .push{
   height: 50px;
 }
 

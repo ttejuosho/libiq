@@ -1,26 +1,43 @@
 const router = require("express").Router();
+const userController = require("../../controllers/userController");
+const  bookController = require("../../controllers/bookController");
+
 
 module.exports = app => {
-    app.get("/test", (req, res) => res.json("Route Tested"));
 
-    // Post route for making a new User
-    app.post("/test", (req, res) => {
-        res.json(req.body);
+    // Post route for creating a new User
+    app.post("/api/user/create", (req, res) => {
+       
+        userController.create(req,res)
+
     });
 
-
-    // Post Route for creating a new user
-    app.post("/api/user/new", (req, res) => {
-        console.log(req.body);
-        db.User.create(req.body.then(newUser => res.json(newUser)))
-    });
 
     // Get request for a User info
-    app.get("/api/user/:id", (req, res) => {
-        db.User
-        .find({ _id: req.params.id })
-        .populate("books")
-        .then(foundUser => res.json(foundUser));
+    app.get("/api/user/:userId", (req, res) => {
+        
+        userController.findById(req, res)
+                     
     });
+
+    // Get request for all User's Books ------CONFIRM
+    app.get("/api/user/:userId/book", (req,res) => {
+
+        userController.findAll(req,res)
+
+    })
     
+    // POST a new Book
+    app.post("/api/book/create", (req,res) => {
+
+        bookController.create(req,res)
+
+    });
+
+    // GET request for a Book Info
+    app.get("/api/book/:bookId", (req,res) => {
+
+        bookController.findById(req,res)
+
+    });
 }

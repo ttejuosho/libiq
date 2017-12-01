@@ -1,5 +1,5 @@
 //require the database models
-
+const router = require("express").Router();
 const db = require("../models");
 
 module.exports = {
