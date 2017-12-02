@@ -147,7 +147,7 @@ class Signup extends Component {
                     value={this.state.confirmPassword} 
                     onChange={this.handleInput} 
                     />
-                    <small id="passwordHelpBlock" class="form-text text-muted">
+                    <small id="passwordHelpBlock" className="form-text text-muted">
                     Your password must be 8-20 characters long.
                     </small>
 

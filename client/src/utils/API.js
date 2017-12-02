@@ -4,8 +4,8 @@ import axios from "axios";
 export default {
     // Creates newUSer Object
     create: dbUser => {
-      
-        return axios.post(`/api/user/create`, dbUser);
+
+        return axios.post(`/api/user`, dbUser);
     },
 
     // Gets user info object
