@@ -100,7 +100,7 @@ class AddBookForm extends Component {
                     
                 </div>
                 <Footer />
-    </div>
+                </div>
             )
         }
         }
@@ -126,7 +126,7 @@ class Books extends Component {
     render(){
         if (this.props.gotBooks){
             return (
-                <div>
+                
                 <div className="booksDiv">
                 <ul>
              
@@ -134,13 +134,19 @@ class Books extends Component {
                        this.props.books.map((items, i ) => {
                           
                             return (
+                                <div className="resultsDiv">
                                 <li key={i} >
+                                
                                     <img className="bookImg" src={items.volumeInfo.imageLinks.thumbnail} />
-                                    <p className="bookTitle">{items.volumeInfo.title}</p>
-                                    <p className="bookAuthor">{items.volumeInfo.authors[0]}</p>            
+                               
+                                <div className="bookInfo">
+                                    <p>{items.volumeInfo.title}</p>
+                                    <p>{items.volumeInfo.authors[0]}</p>            
                                     <button onClick={this.makeBooks ({ title: items.volumeInfo.title, author: items.volumeInfo.authors[0] }) } >Save</button>
+                                </div>
                                     <br/><br/>
                                 </li>
+                                </div>
                             )
                        })
                    }
@@ -148,19 +154,21 @@ class Books extends Component {
                 </ul>
              
             </div>
-                </div>
+                
             )
         } else {
             return (
-                <div>
+                
 
-                            <div className="booksDiv">
-                                <p>Nothing Here</p>
-                            </div>
-           
-                    <h6>Click Here to <a href="">Add a new Book</a></h6>
+            <div className="booksDiv">
+                <h6>Enter Book Name to Search</h6>
+
+                <h6>Click Here to <a href="">Add a new Book</a></h6>
+            </div>
+
                     
-                </div>
+                    
+           
             )
         }
     }

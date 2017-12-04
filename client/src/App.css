@@ -110,8 +110,9 @@ button{
 
 .formdiv{
   float:center;
-  margin: auto auto auto auto;
+  margin: 50px auto auto auto;
   max-width: 430px;
+  clear: both;
 
 }
 
@@ -142,9 +143,42 @@ nav-item a{
 
 .footer, .push{
   height: 50px;
+  width: 100%;
+  display: block
 }
 
 .bodyDiv{
   height: 100%;
   margin-bottom: -50px;
+}
+
+.bookImg{
+  /* display: inline-block; */
+  width: 120px;
+  height: 160px;
+  float: left;
+}
+
+.bookInfo{
+  display: inline-block;
+  margin: 4px auto auto 15px;
+  width: 160px;
+  height: 160px;
+}
+
+.resultsDiv{
+  /* display: inline-block; */
+  margin: 5px;
+  border: 2px solid #388cb3;
+  border-radius: 10px;
+  padding: 6px;
+  float: left;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.booksDiv{
+  align-content: center;
 }
