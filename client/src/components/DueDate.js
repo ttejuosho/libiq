@@ -33,15 +33,14 @@ class DueBooks extends React.Component{
       
     render(){
         return(
-            <div className="shopping-list">
-                <h1>Shopping List for  Me </h1>
-                <ul>
-                    <li>Instagram</li>
-                    <li>WhatsApp</li>
-                    <li>Oculus</li>
-                </ul>
-
-            </div>
+          <div>
+        {this.state.books.map((book, i) => (
+          <div key={i}>
+            <h3>{book.title}</h3>
+            <p>Due {book.due}</p>
+          </div>
+        ))}
+      </div>
         )
     }
 }
