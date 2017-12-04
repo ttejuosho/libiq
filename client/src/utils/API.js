@@ -14,7 +14,7 @@ export default {
     },
 
     // Creates New Book Object
-    createBook: dbBook => {
+    createBooks: dbBook => {
         return axios.post(`/api/book/create`, dbBook);
     },
 
