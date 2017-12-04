@@ -60,6 +60,16 @@ class AddBookForm extends Component {
     render(){
             return (
                 <div>
+                <div id="bookheader">
+                        <nav className="nav">
+                        <a className="navbar-brand" href="/">
+                        <img src={LibiqLogo} width="100" height="100" alt="Home" />
+                        </a>
+                        </nav>
+                        </div>
+                            <div>
+                            <img className="homelogo" src={LibiqWordLogo} width="176" height="100" alt="Home" />
+                </div>
                 <Books gotBooks={this.state.gotBooks} books={this.state.books} />
                 
                 <div className="formdiv">
@@ -142,16 +152,6 @@ class Books extends Component {
         } else {
             return (
                 <div>
-                        <div id="bookheader">
-                        <nav className="nav">
-                        <a className="navbar-brand" href="/">
-                        <img src={LibiqLogo} width="100" height="100" alt="Home" />
-                        </a>
-                        </nav>
-                        </div>
-                            <div>
-                            <img className="homelogo" src={LibiqWordLogo} width="176" height="100" alt="Home" />
-                            </div>
 
                             <div className="booksDiv">
                                 <p>Nothing Here</p>
