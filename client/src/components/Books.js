@@ -135,10 +135,11 @@ class Books extends Component {
                           
                             return (
                                 <li key={i} >
-                                    {items.volumeInfo.title}
-                                    {items.volumeInfo.author}
-                                    <img src={items.volumeInfo.imageLinks.thumbnail} />
-                                    <button onClick={this.makeBooks ({ title: items.volumeInfo.title, author: items.volumeInfo.author }) } >Save</button>
+                                    <img className="bookImg" src={items.volumeInfo.imageLinks.thumbnail} />
+                                    <p className="bookTitle">{items.volumeInfo.title}</p>
+                                    <p className="bookAuthor">{items.volumeInfo.authors[0]}</p>            
+                                    <button onClick={this.makeBooks ({ title: items.volumeInfo.title, author: items.volumeInfo.authors[0] }) } >Save</button>
+                                    <br/><br/>
                                 </li>
                             )
                        })
