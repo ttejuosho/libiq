@@ -37,17 +37,19 @@ export default {
     //calculate when the books are due 
     getBooks: (userId) => {        
         // API call right here
-        axios.get(`/api/user/${userId}/books`)
+        return axios.get(`/api/user/${userId}/books`)
           .then(res => {
             let books = [];
-            res.data.forEach(book => {
+            console.log(res, "this is it")
+            res.data.dueBooksId.forEach(book => {
               let result = {
                 title: book.title,
                 due: moment(book.date).from(moment())
               };
               books.push(result);
             });
-            
+            console.log("you don't know my life", books);
+            return books;
           });
     
       },    
