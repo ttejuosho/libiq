@@ -4,10 +4,6 @@ import LibiqLogo from '../images/LibiqLogo2.jpg';
 
 
 class Header extends Component {
-    state = {
-
-    };
-
     
     render(){
         return(

@@ -137,7 +137,7 @@ class Books extends Component {
                                 <div className="resultsDiv">
                                 <li key={i} >
                                 
-                                    <img className="bookImg" src={items.volumeInfo.imageLinks.thumbnail} />
+                                    <img className="bookImg" src={items.volumeInfo.imageLinks.thumbnail} alt=""/>
                                
                                 <div className="bookInfo">
                                     <p>{items.volumeInfo.title}</p>

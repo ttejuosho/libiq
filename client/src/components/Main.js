@@ -6,9 +6,6 @@ import LibIMG from '../images/libiq1.jpg';
 import Footer from './Footer.js';
 
 class Main extends Component {
-    state = {
-        
-            };
 
     render() {
         return (
@@ -43,9 +40,9 @@ class Main extends Component {
                 </div>
                 <br />
                 <br />
-    
-            <button type="button" className="btn"><a href="/signin">Log In</a></button>
-            <button type="button" className="btn"><a href="/signup">Get Started</a></button>
+     
+             <button type="button" className="btn"><a href="/signin">Log In</a></button>
+             <button type="button" className="btn"><a href="/signup">Get Started</a></button>
             </div>
             <Footer />
             </div>
