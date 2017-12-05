@@ -45,32 +45,31 @@ class Book2 extends React.Component{
 		//user creates a book
 		API.createBooks(bookObj)
 			.then(function(res){
-					
 					console.log("created a book", res)
-					// then I want to reset the books array
-					// get all the book that user has
 
+					// get all the book that user has
 					API.getBooks(res.data._id)
 					.then(function (res){
 
-						
+						//set the state of books to the array of books the user already has
 						app.setState({
 							books:res
 
 						})
+
+						//making sure its actually resetting the state
 						console.log("resetting the state", app.state)
 
+					//had to bind the app/this key word because we are nesting in callback functions
 					}).bind(app)
 
 				})
 			
 
-		//make an API call to create a new book for the user
+		//prevent the button to call back to a form
 		 event.preventDefault();
 
 	}
-
-	
 
 	/*
 		function that will do these things
@@ -100,6 +99,15 @@ class Book2 extends React.Component{
 			   		<input type="submit" value="Submit" onClick ={this.handleFormSubmit} />
 
 			   	{/* Below the form I want to display the books with thir due dates*/}
+
+			   		<div>
+			   			{this.state.books.map((book, i) => (
+          				<div key={i}>
+          				 	<h3>{book.title}</h3>
+           				 	<p>Due {book.due}</p>
+          				</div>
+       				 ))}
+			   		</div>
 			   </div>
 
 
