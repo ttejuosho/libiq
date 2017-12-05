@@ -55,10 +55,10 @@ class Book2 extends React.Component{
 
 						
 						app.setState({
-							books:res.data
+							books:res
 
 						})
-						console.log("resetting the state", app.state.books)
+						console.log("resetting the state", app.state)
 
 					}).bind(app)
 
