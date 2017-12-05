@@ -15,16 +15,16 @@ router
   .delete(booksController.remove);
 
 
-router.route("/archives")
-	.get(booksController.archives);
+// router.route("/archives")
+// 	.get(booksController.archives);
 
 
-router.route("/duebooks")
-	.get(booksController.dueBooks);
+// router.route("/duebooks")
+// 	.get(booksController.dueBooks);
 
 
-router.route("/favorites")
-	.get(booksController.favorites);
+// router.route("/favorites")
+// 	.get(booksController.favorites);
   
   
 module.exports = router;
