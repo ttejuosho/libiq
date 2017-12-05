@@ -2,5 +2,6 @@
 node_modules/
 package-lock.json
 .env
+AddBookForm1.js
 AddBookForm.js
 Books1.js
