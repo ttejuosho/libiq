@@ -102,7 +102,7 @@ class AddBookForm extends Component {
                         <button
                         type="button" 
                         className="btn"
-                        onClick={ this.handleBookFinder}>Add Book                   
+                        onClick={ this.handleBookFinder}>Search                   
                         </button>
     
                         <br/>
