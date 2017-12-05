@@ -49,7 +49,7 @@ class Main extends Component {
              <button type="button" className="btn"><a href="/signin">Log In</a></button>
              <button type="button" className="btn"><a href="/signup">Get Started</a></button>
             </div>
-            <Footer />
+           
             </div>
         );
         }

@@ -19,7 +19,8 @@ class AddBookForm extends Component {
             dueDate: moment(),
             bookAuthor: "",
             bookImg: "",
-            books: []
+            books: [],
+            date: null
             };
     // }
 
@@ -29,12 +30,22 @@ class AddBookForm extends Component {
         this.setState({ [name]: value })
         }
 
-        handleChange(date){
-            this.setState(
-                {
-                    dueDate:date
-                }
-            )
+        handleChange = (date) => {
+            let dueDate = moment(date).from(moment())
+            this.setState({
+                dueDate: dueDate,
+                date: date
+            })
+
+           
+        }
+
+        handleColor = (props) =>{
+            if(this.dueDate.diff(moment()) < 3 ){
+                //change color
+                
+            }
+
         }
 
         loadBooks = () => {
@@ -65,6 +76,7 @@ class AddBookForm extends Component {
     render(){
             return (
                 <div>
+                    <div>
                     
                 <div id="bookheader">
                         <nav className="nav">
@@ -76,8 +88,6 @@ class AddBookForm extends Component {
                             <div>
                             <img className="homelogo" src={LibiqWordLogo} width="176" height="100" alt="Home" />
                 </div>
-                
-                <Books gotBooks={this.state.gotBooks} books={this.state.books} />
                   
                 <div className="formdiv">
    
@@ -95,14 +105,15 @@ class AddBookForm extends Component {
                         </div> 
                         
                         <DatePicker
-                         selected={this.state.dueDate}
+                         name="dueDate"
+                         selected={this.state.date}
                          onChange={this.handleChange}
                         />
                          <br/>
                         <button
                         type="button" 
                         className="btn"
-                        onClick={ this.handleBookFinder}>Search                   
+                        onClick={ this.handleBookFinder }>Search                   
                         </button>
     
                         <br/>
@@ -111,8 +122,11 @@ class AddBookForm extends Component {
                     </form>
                     
                 </div>
-                <Footer />
+                <Books gotBooks={this.state.gotBooks} books={this.state.books} dueDate={this.state.dueDate}/>
+                
                 </div>
+            
+                 </div>
             )
         }
         }
@@ -150,7 +164,8 @@ class Books extends Component {
             
                         title: this.state.title,
                         author: this.state.author,
-                        image: this.state.image
+                        image: this.state.image,
+                        dueDate: this.props.dueDate
                     }
        
         this.state.dueBooks.push(savedBook)
@@ -176,7 +191,7 @@ class Books extends Component {
 
             return (
                 <div>
-                <DueBooks savedBooks = {this.state.dueBooks} saving={this.state.saving}/>
+                <DueBooks savedBooks = {this.state.dueBooks} saving={this.state.saving} dueDate={this.props.dueDate}/>
                 <div className="booksDiv">
                 
                 <ul>
@@ -210,6 +225,7 @@ class Books extends Component {
                 </ul>
              
             </div>
+
             </div>
                 
             )
@@ -231,5 +247,5 @@ class Books extends Component {
         // }
     }
 }
-export default AddBookForm; Books;
+export default AddBookForm;
 

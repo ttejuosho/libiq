@@ -10,6 +10,7 @@ html, body {
   font-family: "Apercu";
   height: 100%;
   margin: 0;
+  position: relative;
 
 }
 
@@ -141,15 +142,17 @@ nav-item a{
   color: white;
 }
 
-.footer, .push{
-  height: 50px;
+.footer .container{
+  height: 0px;
   width: 100%;
+  margin-top: 200px;
   display: block
 }
 
 .bodyDiv{
-  height: 100%;
-  margin-bottom: -50px;
+  min-height: 100%;
+  height: auto;
+  margin:0 auto -50px;
 }
 
 .bookImg{
@@ -188,19 +191,22 @@ ul {
   border: 2px solid #388cb3;
   border-radius: 10px;
   padding: 6px;
-  float: left;
+  width: max-content;
+  align-content: center;
+  display:inline-block;
 }
 
 .SavedBookImg{
-  /* display: inline-block; */
+  display: inline-block;
   width: 120px;
   height: 160px;
-  float: left;
+  
 }
 
 .SavedBookInfo{
-  display: inline-block;
   margin: 4px auto auto 15px;
   width: 160px;
   height: 160px;
+  float: right;
+  
 }
