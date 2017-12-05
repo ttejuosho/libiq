@@ -19,7 +19,6 @@ class Book2 extends React.Component{
 		//API call in here
 		console.log("component mounted")
 		//Once the page is rendered I want to load up the users books
-		
 
 	}
 
@@ -33,6 +32,7 @@ class Book2 extends React.Component{
 	}
 
 	handleFormSubmit = (event) =>{
+		let app = this
 		//When the click on submit the can add a new book
 		//Use API.newBook or something
 
@@ -45,17 +45,23 @@ class Book2 extends React.Component{
 		//user creates a book
 		API.createBooks(bookObj)
 			.then(function(res){
+					
 					console.log("created a book", res)
-					//then I want to reset the books array
-					//get all the book that user has
+					// then I want to reset the books array
+					// get all the book that user has
 
 					API.getBooks(res.data._id)
 					.then(function (res){
-						this.setState({
-							books:res.data.dueBooksId
+
+						
+						app.setState({
+							books:res.data
+
 						})
-						console.log("working")
-					})
+						console.log("resetting the state", app.state.books)
+
+					}).bind(app)
+
 				})
 			
 
@@ -63,6 +69,8 @@ class Book2 extends React.Component{
 		 event.preventDefault();
 
 	}
+
+	
 
 	/*
 		function that will do these things
