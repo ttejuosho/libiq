@@ -7,9 +7,13 @@ import Footer from './Footer.js';
 
 class Main extends Component {
 
+
     render() {
+      
+
         return (
             <div className="App">
+        
             <div className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <h2>LibiQ - Built With React</h2>
@@ -33,6 +37,7 @@ class Main extends Component {
     
                 </ul>
                 </div>
+   
                 <div className="imgcontainer">
                 <img className="libimg" src={LibIMG} alt="Library" />
                 </div>

@@ -182,3 +182,25 @@ ul {
 .booksDiv{
   align-content: center;
 }
+
+.SavedBooksDiv{
+  margin: 5px;
+  border: 2px solid #388cb3;
+  border-radius: 10px;
+  padding: 6px;
+  float: left;
+}
+
+.SavedBookImg{
+  /* display: inline-block; */
+  width: 120px;
+  height: 160px;
+  float: left;
+}
+
+.SavedBookInfo{
+  display: inline-block;
+  margin: 4px auto auto 15px;
+  width: 160px;
+  height: 160px;
+}
