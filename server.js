@@ -4,13 +4,19 @@ const express = require("express");
 const path = require("path");
 const db = require("./models");
 
-//middleware
-const bodyParser = require("body-parser");
-const cookieParser = require('cookie-parser');
-const expressSession  = require('express-session');
-
 //integrate mongo database using ORM
 const mongoose = require("mongoose");
+
+//middleware
+const bodyParser = require("body-parser");
+const expressSession  = require('express-session');
+
+//passport authentication
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const morgan = require('morgan');
+
+
 
 //server port number
 const PORT = process.env.PORT || 3001;
@@ -41,6 +47,15 @@ mongoose.connect(
   }
 ).then(() => console.log("connection successful"))
  .catch((err)=>console.error(err));
+
+app.use(morgan('dev')); //log every request to the console
+app.use(cookieParser());
+
+app.use(session({secret:'ilovescotchscotchyscotchscotch'}))
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 
 
 // Send every request to the React app

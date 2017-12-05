@@ -8,23 +8,23 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
  
  
-module.exports = function (app) {
+module.exports = function (app, passport) {
  
-    //initialize passport
-    passport.use(db.User.createStrategy());
-    // use static serialize and deserialize of model for passport session support
-    passport.serializeUser(db.User.serializeUser());
-    passport.deserializeUser(db.User.deserializeUser());
+    // //initialize passport
+    // passport.use(db.User.createStrategy());
+    // // use static serialize and deserialize of model for passport session support
+    // passport.serializeUser(db.User.serializeUser());
+    // passport.deserializeUser(db.User.deserializeUser());
  
-    //need this according to passport guide
-    app.use(cookieParser());
-    app.use(session({
-        secret: 'the princess and the frog',
-        saveUninitialized: true,
-        resave: true
-    }));
-    app.use(passport.initialize());
-    app.use(passport.session());
+    // //need this according to passport guide
+    // app.use(cookieParser());
+    // app.use(session({
+    //     secret: 'the princess and the frog',
+    //     saveUninitialized: true,
+    //     resave: true
+    // }));
+    // app.use(passport.initialize());
+    // app.use(passport.session());
  
     //routes
     ///api/auth/

@@ -57,6 +57,33 @@ export default {
     
       },    
 
+      getNonArchivedBooks: (userId)=>{
+         // API call right here
+        return axios.get(`/api/user/${userId}/books`)
+          .then(res => {
+            let books = [];
+            console.log(res, "this is it")
+            res.data.dueBooksId.forEach(book => {
+              if(book.isReturned != true){
+                let result = {
+                title: book.title,
+                due: moment(book.date).from(moment())
+                };
+                books.push(result);
+              }
+              
+            });
+            console.log("you don't know my life", books);
+            return books;
+          });
+    
+
+      },
+
+      updateBookArchieve:() =>{
+
+      },
+
     //get the individual book
     getOneBook:(bookId) =>{
         return axios.get(`/api/books/${bookId}`)
