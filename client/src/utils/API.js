@@ -1,7 +1,7 @@
 import axios from "axios";
 import moment from 'moment';
 
-window.moment = moment;
+// window.moment = moment;
 
 export default {
     // Creates new User Object
@@ -14,6 +14,9 @@ export default {
         return axios.get(`/api/user/${userId}`);
     },
 
+    findAllUsers: () =>{
+        return axios.get(`/api/user`)
+    },
     // Creates New Book Object
     createBooks: dbBook => {
         return axios.post(`/api/books/`, dbBook);
@@ -53,6 +56,11 @@ export default {
           });
     
       },    
+
+    //get the individual book
+    getOneBook:(bookId) =>{
+        return axios.get(`/api/books/${bookId}`)
+    },
     // finds the user's favorite books
     favBooks: userId => {
         return axios.get(`/api/user/${userId}/books`)
