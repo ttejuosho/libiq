@@ -53,6 +53,7 @@ class AddBookForm extends Component {
     };
 
 
+
     handleBookFinder = () => {
         console.log("Searching Book: ", this.state.bookTitle);
         // Query to run book search in Books API
@@ -88,6 +89,7 @@ class AddBookForm extends Component {
                     </div>
                     <div>
                         <img className="homelogo" src={LibiqWordLogo} width="176" height="100" alt="Home" />
+                        
                     </div>
 
                     <div className="formdiv">
@@ -129,7 +131,6 @@ class AddBookForm extends Component {
                         gotBooks={this.state.gotBooks}
                         books={this.state.books}
                         dueDate={this.state.dueDate} />
-
                 </div>
 
             </div>
