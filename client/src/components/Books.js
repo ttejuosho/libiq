@@ -197,7 +197,7 @@ class Books extends Component {
             <div>
                 <DueBooks savedBooks={this.state.dueBooks} saving={this.state.saving} dueDate={this.props.dueDate} />
                 <div className="booksDiv">
-
+                
                     {this.props.show_books ? (
                         <ul>
 
@@ -228,7 +228,7 @@ class Books extends Component {
                             }
 
                         </ul>
-                    ) : ''}
+                    ) : <strong>Happy Reading!!!!</strong>}
 
                 </div>
 

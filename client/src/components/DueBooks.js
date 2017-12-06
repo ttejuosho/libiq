@@ -17,7 +17,7 @@ class DueBooks extends Component {
             return (
                 <div>
                     <div>
-                    <strong>Search Results</strong>
+                    <strong>My Books</strong>
                  <ul>
     
                     { 
