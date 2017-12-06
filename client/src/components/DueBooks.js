@@ -21,23 +21,23 @@ class DueBooks extends Component {
                         this.props.savedBooks.map((item,i) => {
                             return (
                                 
-                                <div key={i} className="SavedBooksDiv">
+                                <div key={i} className={`SavedBooksDiv ${false ? 'red' : ''}`}>
  
-                                <li>
+                                    <li>
+                                    
+                                    <img className="SavedBookImg" src={item.image} alt=""/>
                                 
-                                <img className="SavedBookImg" src={item.image} alt=""/>
-                               
-                                <div className="SavedBookInfo">
-                                    <p>{item.title}</p>
-                                    <p>{item.author}</p> 
+                                    <div className="SavedBookInfo">
+                                        <p>{item.title}</p>
+                                        <p>{item.author}</p> 
+                                            
                                         
-                                    
-                                </div>
-                                <br/><br/>
-                                <p>Due in</p> 
-                                <p>{item.dueDate}</p>
-                                    
-                                </li>
+                                    </div>
+                                    <br/><br/>
+                                    <p>Due in</p> 
+                                    <p>{item.dueDate}</p>
+                                        
+                                    </li>
                                 </div>
                                 
                             )
@@ -50,4 +50,6 @@ class DueBooks extends Component {
         
     }
 }
+
+
 export default DueBooks;

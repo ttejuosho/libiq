@@ -30,7 +30,7 @@ class App extends Component {
             <Route component={Main} /> 
           </Switch> 
         </div>
-        
+        <Footer />  
         </div>
       </Router>   
     )
