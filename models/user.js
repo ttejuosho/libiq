@@ -7,7 +7,7 @@ const userSchema = new Schema({
   email: { type: String},
   password: { type: String},
   habitId: [{type: mongoose.Schema.Types.ObjectId, ref: 'Habit'}],
-  dueBooksId:[{type:mongoose.Schema.Types.ObjectId,ref:'Books'}]
+  dueBooksId:[{type:mongoose.Schema.Types.ObjectId,ref:'Book'}]
 });
 
 userSchema.plugin(passportLocalMongoose);
