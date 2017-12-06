@@ -99,11 +99,12 @@ class Signin extends Component {
                     <div class="col">
                    
                     <br />
-                    <center><button 
+                    <center><a><button 
                     disabled={!this.state.formValid}
                     onClick={this.login.bind(this)}
-                    type="button" 
-                    className="btn">Log In</button>
+                    type="button"
+                    href="localhost:3000/books" 
+                    className="btn">Log In</button></a>
                     <br/>
                     <br/>
                     

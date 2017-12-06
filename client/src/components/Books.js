@@ -89,9 +89,12 @@ class AddBookForm extends Component {
                     </div>
                     <div>
                         <img className="homelogo" src={LibiqWordLogo} width="176" height="100" alt="Home" />
-                        
                     </div>
-
+                    <div>
+                    <nav className="navi">
+                    <a className="nav-link" href="/signup">ttejuosho  Log Out</a>
+                    </nav>
+                    </div>
                     <div className="formdiv">
 
                         <form onSubmit={this.handleBookFinder}>
