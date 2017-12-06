@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import '../App.css';
 import moment from 'moment';
+import Footer from './Footer.js'
 
 class DueBooks extends Component {
 
@@ -15,6 +16,8 @@ class DueBooks extends Component {
     render(){
             return (
                 <div>
+                    <div>
+                    <strong>Search Results</strong>
                  <ul>
     
                     { 
@@ -44,7 +47,11 @@ class DueBooks extends Component {
                     })
                     }
                  </ul>
+                 
                 </div>
+                <Footer />
+                </div>
+
             )
        
         

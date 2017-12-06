@@ -148,7 +148,7 @@ nav-item a{
   margin-top: 200px;
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -1050px;
 }
 
 .bodyDiv{
