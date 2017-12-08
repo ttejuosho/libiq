@@ -142,12 +142,24 @@ nav-item a{
   color: white;
 }
 
-.footer .container{
+.duefooter{
   height: 0px;
   width: 100%;
   margin-top: 200px;
-  display: block
+  display: block;
+  position: absolute;
+  bottom: -1050px;
 }
+
+.footer{
+  height: 0px;
+  width: 100%;
+  margin-top: 200px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+}
+
 
 .bodyDiv{
   min-height: 100%;

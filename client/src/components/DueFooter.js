@@ -7,7 +7,7 @@ class Footer extends Component {
 
     render() {
         return (
-            <div className="footer">
+            <div className="duefooter">
                 <div className="container">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">

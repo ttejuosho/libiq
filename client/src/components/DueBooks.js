@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import '../App.css';
 import moment from 'moment';
+import DueFooter from './DueFooter.js'
 
 class DueBooks extends Component {
 
@@ -15,39 +16,47 @@ class DueBooks extends Component {
     render(){
             return (
                 <div>
+                    <div>
+                    <strong>My Books</strong>
                  <ul>
     
                     { 
                         this.props.savedBooks.map((item,i) => {
                             return (
                                 
-                                <div key={i} className="SavedBooksDiv">
+                                <div key={i} className={`SavedBooksDiv ${false ? 'red' : ''}`}>
  
-                                <li>
+                                    <li>
+                                    
+                                    <img className="SavedBookImg" src={item.image} alt=""/>
                                 
-                                <img className="SavedBookImg" src={item.image} alt=""/>
-                               
-                                <div className="SavedBookInfo">
-                                    <p>{item.title}</p>
-                                    <p>{item.author}</p> 
+                                    <div className="SavedBookInfo">
+                                        <p>{item.title}</p>
+                                        <p>{item.author}</p> 
+                                            
                                         
-                                    
-                                </div>
-                                <br/><br/>
-                                <p>Due in</p> 
-                                <p>{item.dueDate}</p>
-                                    
-                                </li>
+                                    </div>
+                                    <br/><br/>
+                                    <p>Due in</p> 
+                                    <p>{item.dueDate}</p>
+                                        
+                                    </li>
                                 </div>
                                 
                             )
                     })
                     }
                  </ul>
+                 
                 </div>
+                <DueFooter />
+                </div>
+
             )
        
         
     }
 }
+
+
 export default DueBooks;

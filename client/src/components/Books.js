@@ -14,221 +14,228 @@ import 'react-datepicker/dist/react-datepicker.css';
 class AddBookForm extends Component {
     // constructor() {
     //     super()
-        state = {
-            bookTitle:"",
-            dueDate: moment(),
-            bookAuthor: "",
-            bookImg: "",
-            books: [],
-            date: null
-            };
+    state = {
+        bookTitle: "",
+        dueDate: moment(),
+        bookAuthor: "",
+        bookImg: "",
+        books: [],
+        date: null,
+        show_books: true
+    };
     // }
 
-    handleInput = (event) => {
+    handleInput(event) {
         const name = event.target.name;
         const value = event.target.value;
         this.setState({ [name]: value })
-        }
+    }
 
-        handleChange = (date) => {
-            let dueDate = moment(date).from(moment())
-            this.setState({
-                dueDate: dueDate,
-                date: date
+    handleChange = (date) => {
+        let dueDate = moment(date).from(moment())
+        this.setState({
+            dueDate: dueDate,
+            date: date
+        })
+
+    }
+
+    handleColor = (props) => {
+        if (this.dueDate.diff(moment()) < 3) {
+            //change color               
+        }
+    }
+
+    loadBooks = () => {
+        API.getBooks()
+            .then(res => this.setState({ books: res.data }))
+            .catch(err => console.log(err));
+    };
+
+
+
+    handleBookFinder = () => {
+        console.log("Searching Book: ", this.state.bookTitle);
+        // Query to run book search in Books API
+        helpers.runQuery(this.state.bookTitle)
+            .then(res => {
+                console.log('fired');
+                this.setState({ gotBooks: true, books: res.data.items, show_books: true })
+            })
+            .then(res => {
+                console.log(this.state.books)
+            })
+            .catch(err => {
+                console.log(err)
             })
 
-           
-        }
+    }
 
-        handleColor = (props) =>{
-            if(this.dueDate.diff(moment()) < 3 ){
-                //change color
-                
-            }
+    setBookState(state) {
+        this.setState({ show_books: state });
+    }
 
-        }
-
-        loadBooks = () => {
-            API.getBooks()
-            .then(res =>this.setState({ books:res.data }))
-            .catch(err =>console.log(err));
-        };
-
-    
-        
-        handleBookFinder = (props) => {
-            console.log("Searching Book: ", this.state.bookTitle);
-    
-            // Query to run book search in Books API
-            helpers.runQuery(this.state.bookTitle)
-                   .then(res => { 
-                       this.setState({ gotBooks: true, books: res.data.items })
-                   })
-                   .then(res => {
-                       console.log(this.state.books)
-                   })
-                   .catch(err => {
-                       console.log(err)
-                   })
-
-            }
-
-    render(){
-            return (
+    render() {
+        return (
+            <div>
                 <div>
-                    <div>
-                    
-                <div id="bookheader">
-                        <nav className="nav">
-                        <a className="navbar-brand" href="/">
-                        <img src={LibiqLogo} width="100" height="100" alt="Home" />
-                        </a>
-                        </nav>
-                        </div>
-                            <div>
-                            <img className="homelogo" src={LibiqWordLogo} width="176" height="100" alt="Home" />
-                </div>
-                  
-                <div className="formdiv">
-   
-                    <form onSubmit={this.handleBookFinder}>
-                  
-                        <div className="col">
-                            <input 
-                            type="text" 
-                            className="form-control" 
-                            placeholder="Enter Book Title"
-                            name="bookTitle" 
-                            value={this.state.bookTitle} 
-                            onChange={this.handleInput} />
-                            <br />
-                        </div> 
-                        
-                        <DatePicker
-                         name="dueDate"
-                         selected={this.state.date}
-                         onChange={this.handleChange}
-                        />
-                         <br/>
-                        <button
-                        type="button" 
-                        className="btn"
-                        onClick={ this.handleBookFinder }>Search                   
-                        </button>
-    
-                        <br/>
-                        <br/> 
 
-                    </form>
-                    
+                    <div id="bookheader">
+                        <nav className="nav">
+                            <a className="navbar-brand" href="/">
+                                <img src={LibiqLogo} width="100" height="100" alt="Home" />
+                            </a>
+                        </nav>
+                    </div>
+                    <div>
+                        <img className="homelogo" src={LibiqWordLogo} width="176" height="100" alt="Home" />
+                        
+                    </div>
+
+                    <div className="formdiv">
+
+                        <form onSubmit={this.handleBookFinder}>
+
+                            <div className="col">
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Enter Book Title"
+                                    name="bookTitle"
+                                    value={this.state.bookTitle}
+                                    onChange={this.handleInput.bind(this)} />
+                                <br />
+                            </div>
+                            <p>Click below to choose due date</p>
+                            <DatePicker
+                                name="dueDate"
+                                selected={this.state.date}
+                                onChange={this.handleChange}
+                            />
+                            <br />
+                            <button
+                                type="button"
+                                className="btn"
+                                onClick={this.handleBookFinder}>Search
+                        </button>
+
+                            <br />
+                            <br />
+
+                        </form>
+
+                    </div>
+                    <Books
+                        setBookState={this.setBookState.bind(this)}
+                        show_books={this.state.show_books}
+                        gotBooks={this.state.gotBooks}
+                        books={this.state.books}
+                        dueDate={this.state.dueDate} />
                 </div>
-                <Books gotBooks={this.state.gotBooks} books={this.state.books} dueDate={this.state.dueDate}/>
-                
-                </div>
-            
-                 </div>
-            )
-        }
-        }
+
+            </div>
+        )
+    }
+}
 
 
 
 
 class Books extends Component {
-    
+
     constructor() {
         super();
         this.state = {
             // showReply: false
-            title: "",
-            author: "",
-            image: "",
-            dueBooks:[],
+            // title: "",
+            // author: "",
+            // image: "",
+
+            dueBooks: [],
             saving: false,
             gotBooks: true
         }
     }
 
-    
-    onSaveClick = (item, e) =>{
-        console.log("BuggHere");
-     this.setState({
 
+    onSaveClick = (item, e) => {
+
+        let savedBook = {
             title: item.volumeInfo.title,
             author: item.volumeInfo.authors,
             image: item.volumeInfo.imageLinks.thumbnail,
-            saving: true
-     }, () =>{
+            dueDate: this.props.dueDate
+        };
 
-        let savedBook = {
-            
-                        title: this.state.title,
-                        author: this.state.author,
-                        image: this.state.image,
-                        dueDate: this.props.dueDate
-                    }
-       
-        this.state.dueBooks.push(savedBook)
-        this.makeBooks(this.state.dueBooks)
-        
+        let books = [].concat(this.state.dueBooks);
+        books.push(savedBook);
 
-     })
-            
-            console.log("hi",item.volumeInfo.title, item.volumeInfo.authors)
-        
+        this.props.setBookState(0);
+        this.setState({
+            saving: true,
+            dueBooks: books
+        }, () => {
+
+            this.makeBooks(this.state.dueBooks)
+
+
+        })
+
+        console.log("hi", item.volumeInfo.title, item.volumeInfo.authors)
+
     }
 
-    makeBooks = (aBook) =>{
-
-        console.log("MakeBOOkS running");
-        API.createBooks(aBook)
-        .then(console.log(aBook))
-        .catch(err=>console.log(err));
+    makeBooks = (aBook) => {
+        API.createBooks({ books: aBook })
+            .then(console.log(aBook))
+            .catch(err => console.log(err));
     };
 
-    render(){
+    render() {
         // if (this.props.gotBooks){
 
-            return (
-                <div>
-                <DueBooks savedBooks = {this.state.dueBooks} saving={this.state.saving} dueDate={this.props.dueDate}/>
+        return (
+            <div>
+                <DueBooks savedBooks={this.state.dueBooks} saving={this.state.saving} dueDate={this.props.dueDate} />
                 <div className="booksDiv">
                 
-                <ul>
-             
-                   {                
-                       this.props.books.map((items, i ) => {
+                    {this.props.show_books ? (
+                        <ul>
 
-                            let boundItemClick = this.onSaveClick.bind(this, items);
-                            return (
-                                
-                                <div key={i} className="resultsDiv">
-                                
-                                <li>
-                                
-                                    <img className="bookImg" src={items.volumeInfo.imageLinks.thumbnail} alt=""/>
-                               
-                                <div className="bookInfo">
-                                    <p>{items.volumeInfo.title}</p>
-                                    <p>{items.volumeInfo.authors}</p>         
-                                    <button type="submit" onClick={boundItemClick} >Save</button>
-                                </div>
-                                    <br/><br/>
-                                </li>
-                               
-                                </div>
-                                
-                            )
-                       })
-                   }
-             
-                </ul>
-             
+                            {
+                                this.props.books.map((items, i) => {
+
+                                    let boundItemClick = this.onSaveClick.bind(this, items);
+                                    return (
+
+                                        <div key={i} className="resultsDiv">
+
+                                            <li>
+
+                                                <img className="bookImg" src={items.volumeInfo.imageLinks.thumbnail} alt="" />
+
+                                                <div className="bookInfo">
+                                                    <p>{items.volumeInfo.title}</p>
+                                                    <p>{items.volumeInfo.authors}</p>
+                                                    <button type="submit" onClick={boundItemClick} >Save</button>
+                                                </div>
+                                                <br /><br />
+                                            </li>
+
+                                        </div>
+
+                                    )
+                                })
+                            }
+
+                        </ul>
+                    ) : <strong>Happy Reading!!!!</strong>}
+
+                </div>
+
             </div>
 
-            </div>
-                
-            )
+        )
         // } else {
         //     return (
         //         <div>
@@ -240,9 +247,9 @@ class Books extends Component {
         //     </div>
         //     </div>
 
-                    
-                    
-           
+
+
+
         //     )
         // }
     }
