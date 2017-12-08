@@ -22,10 +22,12 @@ class App extends Component {
           <Switch>
             <Route exact path="/signin" component={Signin} />
             <Route exact path="/signup" component={Signup} />
-            <Route exact path="/books" component={Books}/> 
-            <Route exact path="/duebooks" component={DueBooks} />
+
             <Route exact path="/books2" component={Books2} />
 
+
+            <Route exact path="/books" component={Books} />
+            <Route exact path="/duebooks" component={DueBooks} />  
 
             <Route component={Main} /> 
           </Switch> 

@@ -6,11 +6,29 @@ import '../App.css';
 import '../animate.css';
 import API from '../utils/API';
 
+/*
+	To Do: 
+		   Add Delete Button
+		   Add Favorite Button
+		   Add Update Button
+		   Add Date Picker
+		   Add Authentication with Passport
+		   Add Seed Ask Scott what he's done
+		   Deploy on Heroku
+		   Add push notification
+		   Add Kaiwaii React
+		   Add Habits
+
+*/
+
+//https://www.npmjs.com/package/react-datepicker
+//https://www.npmjs.com/package/react-day-picker
+
 class Book2 extends React.Component{
 	state ={
 		books:[],
 		bookTitle:"",
-		dueDate: "",
+		dueDate: moment(),
 		user:""
 	};
 
@@ -71,6 +89,11 @@ class Book2 extends React.Component{
 
 	}
 
+	handleDelete = (event) =>{
+		//
+
+	}
+
 	/*
 		function that will do these things
 		This page will show the books
@@ -105,6 +128,9 @@ class Book2 extends React.Component{
           				<div key={i}>
           				 	<h3>{book.title}</h3>
            				 	<p>Due {book.due}</p>
+           				 	<button>Favorite</button>
+           				 	<button>Delete</button>
+
           				</div>
        				 ))}
 			   		</div>
