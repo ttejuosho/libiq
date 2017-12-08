@@ -51,12 +51,6 @@ mongoose.connect(
 ).then(() => console.log("connection successful"))
  .catch((err)=>console.error(err));
 
-app.use(morgan('dev')); //log every request to the console
-app.use(cookieParser());
-
-app.use(session({secret:'ilovescotchscotchyscotchscotch'}))
-app.use(passport.initialize());
-app.use(passport.session());
 
 
 
