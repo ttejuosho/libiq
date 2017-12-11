@@ -17,7 +17,7 @@ I get a couple books over a couple days from the library and would lose track of
 * Express
 * Node
 
-** Additional techonologies **
+**Additional techonologies**
 * Google API
 * Bootstrap
 
