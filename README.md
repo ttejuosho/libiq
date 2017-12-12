@@ -10,4 +10,4 @@
 - Ola Giwa (Back End)
 
 ## Screenshots
-[![LibiQ](./src/images/homes)]
+[![LibiQ](./src/images/home.png)]
