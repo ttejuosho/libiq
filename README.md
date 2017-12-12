@@ -10,7 +10,8 @@
 - Ola Giwa (Back End)
 
 ## Screenshots
-<img src="./client/src/images/user.png" width=300px height=300px align="left"/>
+<img src="./client/src/images/user.png" width=400px height=300px align="left"/>
 <img src="./client/src/images/login.png" width=300px height=300px align="right"/>
+
 <img src="./client/src/images/signup.png" width=300px height=300px align="left"/>
-<img src="./client/src/images/book.png" width=300px height=300px align="right"/>
+<img src="./client/src/images/book.png" width=400px height=300px align="right"/>
