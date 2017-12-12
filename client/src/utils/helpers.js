@@ -18,13 +18,8 @@ const helpers = {
     .then(res => {return res} )
     .catch(err => {console.log(err)})
     
-
-
     }
 }
-
-
-
 
 // We export the helpers function
 export default helpers;
