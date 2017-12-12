@@ -23,12 +23,12 @@
 <img src="./client/src/images/book.png" width=450px height=350px align="centre"/>
 <img src="./client/src/images/footer.png" width=480px height=70px align="centre"/>
 
-##Who Uses Libiq
+## Who Uses Libiq
 - Anyone who gets books from the library 
 
-##How it works
-## At the MVP Level, the User Adds a Book and we pull the books details from the Google Books API.
-<img src="./client/src/images/booksapi.png" width=500px height=250px align="centre"/>
-
-##Calculate time remaining using the Moment Js Library
+## How it works
+### At the MVP Level, the User Adds a Book and we pull the books details from the Google Books API.
 <img src="./client/src/images/booksapi.png" width=608px height=282px align="centre"/>
+
+### Calculate time remaining using the Moment Js Library
+<img src="./client/src/images/moment.png" width=500px height=250px align="centre"/>
