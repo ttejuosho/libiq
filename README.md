@@ -31,4 +31,9 @@
 <img src="./client/src/images/booksapi.png" width=608px height=282px align="centre"/>
 
 ### Calculate time remaining using the Moment Js Library
-<img src="./client/src/images/moment.png" width=500px height=250px align="centre"/>
+<img src="./client/src/images/moment.png" width=600px height=250px align="centre"/>
+
+## Usage
+### First, 
+- yarn install in root folder and client folder and 
+- yarn start to launch.

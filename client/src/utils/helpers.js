@@ -1,11 +1,6 @@
 // Include the Axios library for HTTP requests
 import axios from "axios";
 
-
-
-// Google Books API Key
-// var APIKey = "AIzaSyCZHjfzT21eqDqHKtFwh3CcFbRVJNJgUmQ"
-
 // Helper Functions
 const helpers = {
 
