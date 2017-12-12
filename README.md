@@ -10,8 +10,14 @@
 - Ola Giwa (Back End)
 
 ## Screenshots
+### User Log in Page
 <img src="./client/src/images/user.png" width=400px height=300px align="left"/>
+
+### Log In Page
 <img src="./client/src/images/login.png" width=300px height=300px align="right"/>
 
+### SignUp Page
 <img src="./client/src/images/signup.png" width=300px height=300px align="left"/>
+
+### Added Books Page
 <img src="./client/src/images/book.png" width=400px height=300px align="right"/>
