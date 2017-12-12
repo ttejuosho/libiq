@@ -49,7 +49,6 @@ class DueBooks extends Component {
                  </ul>
                  
                 </div>
-                <Footer />
                 </div>
 
             )
