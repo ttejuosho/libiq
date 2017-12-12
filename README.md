@@ -1,7 +1,7 @@
 # LibIQ
 <img src="./client/src/images/LibiqLogo2.jpg" align="left" />
 
-## About LibiQ [![LibiQ](./client/src/images/LibiqLogo2jpg)](https://github.com/ttejuosho/libiq)
+## About [![LibiQ](./client/src/images/LibiqLogo2jpg)](https://github.com/ttejuosho/libiq)
 - Libiq helps users track books they get from the library so they can know when its and return it on time.
 - Libiq was built with React Js, Node, Express with a MongoDb database
 
@@ -21,3 +21,4 @@
 
 ### Added Books Page
 <img src="./client/src/images/book.png" width=450px height=350px align="centre"/>
+<img src="./client/src/images/footer.png" width=450px height=350px align="centre"/>
