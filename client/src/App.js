@@ -5,6 +5,7 @@ import Signin from './components/Signin.js';
 import Signup from './components/Signup.js';
 import { Route, Switch } from "react-router-dom";
 import DueBooks from './components/DueDate.js';
+import AddBookForm from './components/AddBookForm.js'
 import Books2 from './components/Books2.js';
 import Footer from './components/Footer.js';
 
@@ -24,9 +25,9 @@ class App extends Component {
             <Route exact path="/signup" component={Signup} />
 
             <Route exact path="/books2" component={Books2} />
+            <Route exact path="/books" component={AddBookForm} />
 
 
-            <Route exact path="/books" component={Books} />
             <Route exact path="/duebooks" component={DueBooks} />  
 
             <Route component={Main} /> 

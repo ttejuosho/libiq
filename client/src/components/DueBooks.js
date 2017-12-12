@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import '../App.css';
 import moment from 'moment';
-import DueFooter from './DueFooter.js'
+import Footer from './Footer.js'
 
 class DueBooks extends Component {
 
@@ -49,7 +49,7 @@ class DueBooks extends Component {
                  </ul>
                  
                 </div>
-                <DueFooter />
+                <Footer />
                 </div>
 
             )

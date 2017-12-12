@@ -34,6 +34,10 @@ class Main extends Component {
                 <li className="nav-item">
                 <a className="nav-link" href="/signup">Sign Up</a>
                 </li>
+
+                <li className="nav-item">
+                <a className="nav-link" href="/books">Your Books</a>
+                </li>
     
                 </ul>
                 </div>
