@@ -21,4 +21,4 @@
 
 ### Added Books Page
 <img src="./client/src/images/book.png" width=450px height=350px align="centre"/>
-<img src="./client/src/images/footer.png" width=450px height=350px align="centre"/>
+<img src="./client/src/images/footer.png" width=450px height=100px align="centre"/>
