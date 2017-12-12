@@ -11,7 +11,7 @@
 
 ## Screenshots
 ### User Log in Page
-<img src="./client/src/images/user.png" width=400px height=300px align="center"/>
+<img src="./client/src/images/user.png" width=450px height=300px align="center"/>
 
 ### Log In Page
 <img src="./client/src/images/login.png" width=300px height=300px align="center"/>
@@ -20,4 +20,4 @@
 <img src="./client/src/images/signup.png" width=300px height=300px align="center"/>
 
 ### Added Books Page
-<img src="./client/src/images/book.png" width=400px height=300px align="centre"/>
+<img src="./client/src/images/book.png" width=450px height=350px align="centre"/>
