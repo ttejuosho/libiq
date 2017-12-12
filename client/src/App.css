@@ -137,6 +137,8 @@ button{
 
 .homelogo{
  display: inline;
+ position: relative;
+ left: -70px;
 }
 
 hr{
