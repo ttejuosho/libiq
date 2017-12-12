@@ -10,7 +10,7 @@
 - Ola Giwa (Back End)
 
 ## Screenshots
-### User Log in Page
+### User Home
 <img src="./client/src/images/user.png" width=450px height=300px align="center"/>
 
 ### Log In Page
@@ -20,8 +20,8 @@
 <img src="./client/src/images/signup.png" width=300px height=300px align="center"/>
 
 ### Added Books Page
-<img src="./client/src/images/book.png" width=450px height=350px align="centre"/>
-<img src="./client/src/images/footer.png" width=480px height=70px align="centre"/>
+<img src="./client/src/images/book.png" width=480px height=350px align="centre"/>
+<img src="./client/src/images/footer.png" width=500px height=70px align="centre"/>
 
 ## Who Uses Libiq
 - Anyone who gets books from the library 
