@@ -92,7 +92,7 @@ class AddBookForm extends Component {
                     </div>
                     <div>
                     <nav className="navi">
-                    <a className="nav-link" href="/signup">ttejuosho  Log Out</a>
+                    <a className="nav-link" href="/">ttejuosho</a>
                     </nav>
                     </div>
                     <div className="formdiv">

@@ -29,6 +29,9 @@ class Main extends Component {
                 <div id="header">
                 <ul className="nav justify-content-end">
                 <li className="nav-item">
+                <a className="nav-link" href="/books">Add Books</a>
+                </li>
+                <li className="nav-item">
                 <a className="nav-link" href="/signin">Login</a>
                 </li>
                 <li className="nav-item">
